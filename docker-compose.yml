@@ -1,0 +1,17 @@
+services:
+  mail-agent-db:
+    image: pgvector/pgvector:pg16
+    container_name: mail-agent-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mailagent
+    ports:
+      - "5333:5432"
+    volumes:
+      - mail-agent-db-data:/var/lib/postgresql/data
+      - ./mail_agent_schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+
+volumes:
+  mail-agent-db-data:
