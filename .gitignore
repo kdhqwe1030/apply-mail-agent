@@ -1,0 +1,24 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+# Local environment variables (keep shareable examples)
+.env
+.env.*
+!.env.sample
+!.env.example
+# Python and Jupyter caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+# Video files
+*.[mM][oO][vV]
+*.[mM][pP]4
+*.[mM]4[vV]
+*.[wW][eE][bB][mM]
+*.[aA][vV][iI]
+*.[mM][kK][vV]
+# macOS metadata
+.DS_Store
+._*
